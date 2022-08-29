@@ -1,0 +1,10 @@
+make --dry-run --always-make --keep-going --print-directory
+make: Entering directory `/Users/remychauveau/Sites/chuki/contracts'
+echo 
+npm run build
+rm -rf ./deploy && mkdir deploy
+cd ./deploy && mkdir chuki
+cd ./../../
+cd ./target && cp ./chuki.contract.wasm ./../deploy/chuki/chuki.contract.wasm && cp ./chuki.contract.abi ./../deploy/chuki/chuki.contract.abi
+make: Leaving directory `/Users/remychauveau/Sites/chuki/contracts'
+ 
