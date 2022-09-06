@@ -2,6 +2,20 @@
   "version": "eosio::abi/1.2",
   "structs": [
     {
+      "name": "AccountRulesTable",
+      "base": "",
+      "fields": [
+        {
+          "name": "key",
+          "type": "name"
+        },
+        {
+          "name": "limitShare",
+          "type": "int32"
+        }
+      ]
+    },
+    {
       "name": "ConfigTable",
       "base": "",
       "fields": [
@@ -44,9 +58,14 @@
       ]
     },
     {
-      "name": "defconfig",
+      "name": "remaccrule",
       "base": "",
-      "fields": []
+      "fields": [
+        {
+          "name": "account",
+          "type": "name"
+        }
+      ]
     },
     {
       "name": "remconfig",
@@ -55,10 +74,6 @@
         {
           "name": "key",
           "type": "name"
-        },
-        {
-          "name": "value",
-          "type": "float32"
         }
       ]
     },
@@ -73,6 +88,20 @@
         {
           "name": "value",
           "type": "float32"
+        }
+      ]
+    },
+    {
+      "name": "upsrtaccrule",
+      "base": "",
+      "fields": [
+        {
+          "name": "account",
+          "type": "name"
+        },
+        {
+          "name": "limit",
+          "type": "int32"
         }
       ]
     }
@@ -85,8 +114,8 @@
       "ricardian_contract": ""
     },
     {
-      "name": "defconfig",
-      "type": "defconfig",
+      "name": "remaccrule",
+      "type": "remaccrule",
       "ricardian_contract": ""
     },
     {
@@ -98,9 +127,21 @@
       "name": "upconfig",
       "type": "upconfig",
       "ricardian_contract": ""
+    },
+    {
+      "name": "upsrtaccrule",
+      "type": "upsrtaccrule",
+      "ricardian_contract": ""
     }
   ],
   "tables": [
+    {
+      "name": "accrules",
+      "type": "AccountRulesTable",
+      "index_type": "i64",
+      "key_names": [],
+      "key_types": []
+    },
     {
       "name": "config",
       "type": "ConfigTable",
