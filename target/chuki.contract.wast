@@ -8432,216 +8432,6 @@
    )
    (return)
   )
-  (local.set $2
-   (i32.load offset=16
-    (local.get $0)
-   )
-  )
-  (local.set $6
-   (call $~lib/as-chain/name/S2N
-    (i32.const 2784)
-   )
-  )
-  (call $~lib/as-chain/name/Name#set:N
-   (local.tee $4
-    (call $~lib/rt/stub/__new
-     (i32.const 8)
-     (i32.const 5)
-    )
-   )
-   (i64.const 0)
-  )
-  (call $~lib/as-chain/name/Name#set:N
-   (local.get $4)
-   (local.get $6)
-  )
-  (local.set $6
-   (i64.load
-    (local.get $4)
-   )
-  )
-  (call $~lib/staticarray/StaticArray<~lib/string/String>#__uset
-   (i32.const 4480)
-   (i32.const 1)
-   (i32.const 2784)
-  )
-  (local.set $10
-   (call $~lib/proton-tsc/modules/store/store/TableStore<tables/config.table/ConfigTable>#requireGet
-    (local.get $2)
-    (local.get $6)
-    (call $~lib/staticarray/StaticArray<~lib/string/String>#join
-     (i32.const 4480)
-    )
-   )
-  )
-  (local.set $2
-   (i32.load offset=16
-    (local.get $0)
-   )
-  )
-  (local.set $6
-   (call $~lib/as-chain/name/S2N
-    (i32.const 2832)
-   )
-  )
-  (call $~lib/as-chain/name/Name#set:N
-   (local.tee $4
-    (call $~lib/rt/stub/__new
-     (i32.const 8)
-     (i32.const 5)
-    )
-   )
-   (i64.const 0)
-  )
-  (call $~lib/as-chain/name/Name#set:N
-   (local.get $4)
-   (local.get $6)
-  )
-  (local.set $6
-   (i64.load
-    (local.get $4)
-   )
-  )
-  (call $~lib/staticarray/StaticArray<~lib/string/String>#__uset
-   (i32.const 4512)
-   (i32.const 1)
-   (i32.const 2832)
-  )
-  (local.set $8
-   (call $~lib/proton-tsc/modules/store/store/TableStore<tables/config.table/ConfigTable>#requireGet
-    (local.get $2)
-    (local.get $6)
-    (call $~lib/staticarray/StaticArray<~lib/string/String>#join
-     (i32.const 4512)
-    )
-   )
-  )
-  (local.set $2
-   (i32.load offset=16
-    (local.get $0)
-   )
-  )
-  (local.set $6
-   (call $~lib/as-chain/name/S2N
-    (i32.const 2880)
-   )
-  )
-  (call $~lib/as-chain/name/Name#set:N
-   (local.tee $4
-    (call $~lib/rt/stub/__new
-     (i32.const 8)
-     (i32.const 5)
-    )
-   )
-   (i64.const 0)
-  )
-  (call $~lib/as-chain/name/Name#set:N
-   (local.get $4)
-   (local.get $6)
-  )
-  (local.set $6
-   (i64.load
-    (local.get $4)
-   )
-  )
-  (call $~lib/staticarray/StaticArray<~lib/string/String>#__uset
-   (i32.const 4544)
-   (i32.const 1)
-   (i32.const 2880)
-  )
-  (local.set $7
-   (call $~lib/proton-tsc/modules/store/store/TableStore<tables/config.table/ConfigTable>#requireGet
-    (local.get $2)
-    (local.get $6)
-    (call $~lib/staticarray/StaticArray<~lib/string/String>#join
-     (i32.const 4544)
-    )
-   )
-  )
-  (local.set $2
-   (i32.load offset=16
-    (local.get $0)
-   )
-  )
-  (local.set $6
-   (call $~lib/as-chain/name/S2N
-    (i32.const 2928)
-   )
-  )
-  (call $~lib/as-chain/name/Name#set:N
-   (local.tee $4
-    (call $~lib/rt/stub/__new
-     (i32.const 8)
-     (i32.const 5)
-    )
-   )
-   (i64.const 0)
-  )
-  (call $~lib/as-chain/name/Name#set:N
-   (local.get $4)
-   (local.get $6)
-  )
-  (local.set $6
-   (i64.load
-    (local.get $4)
-   )
-  )
-  (call $~lib/staticarray/StaticArray<~lib/string/String>#__uset
-   (i32.const 4576)
-   (i32.const 1)
-   (i32.const 2928)
-  )
-  (local.set $4
-   (call $~lib/proton-tsc/modules/store/store/TableStore<tables/config.table/ConfigTable>#requireGet
-    (local.get $2)
-    (local.get $6)
-    (call $~lib/staticarray/StaticArray<~lib/string/String>#join
-     (i32.const 4576)
-    )
-   )
-  )
-  (local.set $2
-   (i32.load offset=16
-    (local.get $0)
-   )
-  )
-  (local.set $6
-   (call $~lib/as-chain/name/S2N
-    (i32.const 2880)
-   )
-  )
-  (call $~lib/as-chain/name/Name#set:N
-   (local.tee $9
-    (call $~lib/rt/stub/__new
-     (i32.const 8)
-     (i32.const 5)
-    )
-   )
-   (i64.const 0)
-  )
-  (call $~lib/as-chain/name/Name#set:N
-   (local.get $9)
-   (local.get $6)
-  )
-  (local.set $6
-   (i64.load
-    (local.get $9)
-   )
-  )
-  (call $~lib/staticarray/StaticArray<~lib/string/String>#__uset
-   (i32.const 4608)
-   (i32.const 1)
-   (i32.const 2880)
-  )
-  (local.set $9
-   (call $~lib/proton-tsc/modules/store/store/TableStore<tables/config.table/ConfigTable>#requireGet
-    (local.get $2)
-    (local.get $6)
-    (call $~lib/staticarray/StaticArray<~lib/string/String>#join
-     (i32.const 4608)
-    )
-   )
-  )
   (if
    (i64.eq
     (i64.load
@@ -8683,6 +8473,240 @@
     )
    )
    (block
+    (local.set $2
+     (i32.load offset=16
+      (local.get $0)
+     )
+    )
+    (local.set $6
+     (call $~lib/as-chain/name/S2N
+      (i32.const 2784)
+     )
+    )
+    (call $~lib/as-chain/name/Name#set:N
+     (local.tee $4
+      (call $~lib/rt/stub/__new
+       (i32.const 8)
+       (i32.const 5)
+      )
+     )
+     (i64.const 0)
+    )
+    (call $~lib/as-chain/name/Name#set:N
+     (local.get $4)
+     (local.get $6)
+    )
+    (local.set $6
+     (i64.load
+      (local.get $4)
+     )
+    )
+    (call $~lib/staticarray/StaticArray<~lib/string/String>#__uset
+     (i32.const 4480)
+     (i32.const 1)
+     (i32.const 2784)
+    )
+    (local.set $10
+     (call $~lib/proton-tsc/modules/store/store/TableStore<tables/config.table/ConfigTable>#requireGet
+      (local.get $2)
+      (local.get $6)
+      (call $~lib/staticarray/StaticArray<~lib/string/String>#join
+       (i32.const 4480)
+      )
+     )
+    )
+    (local.set $2
+     (i32.load offset=16
+      (local.get $0)
+     )
+    )
+    (local.set $6
+     (call $~lib/as-chain/name/S2N
+      (i32.const 2832)
+     )
+    )
+    (call $~lib/as-chain/name/Name#set:N
+     (local.tee $4
+      (call $~lib/rt/stub/__new
+       (i32.const 8)
+       (i32.const 5)
+      )
+     )
+     (i64.const 0)
+    )
+    (call $~lib/as-chain/name/Name#set:N
+     (local.get $4)
+     (local.get $6)
+    )
+    (local.set $6
+     (i64.load
+      (local.get $4)
+     )
+    )
+    (call $~lib/staticarray/StaticArray<~lib/string/String>#__uset
+     (i32.const 4512)
+     (i32.const 1)
+     (i32.const 2832)
+    )
+    (local.set $8
+     (call $~lib/proton-tsc/modules/store/store/TableStore<tables/config.table/ConfigTable>#requireGet
+      (local.get $2)
+      (local.get $6)
+      (call $~lib/staticarray/StaticArray<~lib/string/String>#join
+       (i32.const 4512)
+      )
+     )
+    )
+    (local.set $2
+     (i32.load offset=16
+      (local.get $0)
+     )
+    )
+    (local.set $6
+     (call $~lib/as-chain/name/S2N
+      (i32.const 2880)
+     )
+    )
+    (call $~lib/as-chain/name/Name#set:N
+     (local.tee $4
+      (call $~lib/rt/stub/__new
+       (i32.const 8)
+       (i32.const 5)
+      )
+     )
+     (i64.const 0)
+    )
+    (call $~lib/as-chain/name/Name#set:N
+     (local.get $4)
+     (local.get $6)
+    )
+    (local.set $6
+     (i64.load
+      (local.get $4)
+     )
+    )
+    (call $~lib/staticarray/StaticArray<~lib/string/String>#__uset
+     (i32.const 4544)
+     (i32.const 1)
+     (i32.const 2880)
+    )
+    (local.set $7
+     (call $~lib/proton-tsc/modules/store/store/TableStore<tables/config.table/ConfigTable>#requireGet
+      (local.get $2)
+      (local.get $6)
+      (call $~lib/staticarray/StaticArray<~lib/string/String>#join
+       (i32.const 4544)
+      )
+     )
+    )
+    (local.set $2
+     (i32.load offset=16
+      (local.get $0)
+     )
+    )
+    (local.set $6
+     (call $~lib/as-chain/name/S2N
+      (i32.const 2928)
+     )
+    )
+    (call $~lib/as-chain/name/Name#set:N
+     (local.tee $4
+      (call $~lib/rt/stub/__new
+       (i32.const 8)
+       (i32.const 5)
+      )
+     )
+     (i64.const 0)
+    )
+    (call $~lib/as-chain/name/Name#set:N
+     (local.get $4)
+     (local.get $6)
+    )
+    (local.set $6
+     (i64.load
+      (local.get $4)
+     )
+    )
+    (call $~lib/staticarray/StaticArray<~lib/string/String>#__uset
+     (i32.const 4576)
+     (i32.const 1)
+     (i32.const 2928)
+    )
+    (local.set $4
+     (call $~lib/proton-tsc/modules/store/store/TableStore<tables/config.table/ConfigTable>#requireGet
+      (local.get $2)
+      (local.get $6)
+      (call $~lib/staticarray/StaticArray<~lib/string/String>#join
+       (i32.const 4576)
+      )
+     )
+    )
+    (local.set $2
+     (i32.load offset=16
+      (local.get $0)
+     )
+    )
+    (local.set $6
+     (call $~lib/as-chain/name/S2N
+      (i32.const 2880)
+     )
+    )
+    (call $~lib/as-chain/name/Name#set:N
+     (local.tee $9
+      (call $~lib/rt/stub/__new
+       (i32.const 8)
+       (i32.const 5)
+      )
+     )
+     (i64.const 0)
+    )
+    (call $~lib/as-chain/name/Name#set:N
+     (local.get $9)
+     (local.get $6)
+    )
+    (local.set $6
+     (i64.load
+      (local.get $9)
+     )
+    )
+    (call $~lib/staticarray/StaticArray<~lib/string/String>#__uset
+     (i32.const 4608)
+     (i32.const 1)
+     (i32.const 2880)
+    )
+    (local.set $2
+     (call $~lib/proton-tsc/modules/store/store/TableStore<tables/config.table/ConfigTable>#requireGet
+      (local.get $2)
+      (local.get $6)
+      (call $~lib/staticarray/StaticArray<~lib/string/String>#join
+       (i32.const 4608)
+      )
+     )
+    )
+    (call $tables/config.table/ConfigTable#set:value
+     (local.get $10)
+     (f32.convert_i64_s
+      (i64.add
+       (i64.load
+        (local.get $3)
+       )
+       (i64.trunc_f32_s
+        (f32.load offset=4
+         (local.get $10)
+        )
+       )
+      )
+     )
+    )
+    (call $~lib/proton-tsc/modules/store/store/TableStore<tables/config.table/ConfigTable>#update
+     (i32.load offset=16
+      (local.get $0)
+     )
+     (local.get $10)
+     (i32.load
+      (local.get $0)
+     )
+    )
     (if
      (f64.ge
       (local.tee $5
@@ -8715,14 +8739,14 @@
       )
       (f64.promote_f32
        (f32.load offset=4
-        (local.get $9)
+        (local.get $2)
        )
       )
      )
      (local.set $5
       (f64.promote_f32
        (f32.load offset=4
-        (local.get $9)
+        (local.get $2)
        )
       )
      )
@@ -8898,30 +8922,6 @@
      (local.get $9)
      (local.get $8)
      (i32.const 5904)
-    )
-    (call $tables/config.table/ConfigTable#set:value
-     (local.get $10)
-     (f32.convert_i64_s
-      (i64.add
-       (i64.load
-        (local.get $3)
-       )
-       (i64.trunc_f32_s
-        (f32.load offset=4
-         (local.get $10)
-        )
-       )
-      )
-     )
-    )
-    (call $~lib/proton-tsc/modules/store/store/TableStore<tables/config.table/ConfigTable>#update
-     (i32.load offset=16
-      (local.get $0)
-     )
-     (local.get $10)
-     (i32.load
-      (local.get $0)
-     )
     )
    )
   )

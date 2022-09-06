@@ -33,7 +33,7 @@ export class chucki extends Contract {
     @action("remconfig")
     remconfig(key: Name): void {
 
-        const existsConfig = this.configTable.requireGet(key.N,`${key.toString()} not exists`);
+        const existsConfig = this.configTable.requireGet(key.N, `${key.toString()} not exists`);
         check(!!existsConfig, `${key.toString()} not exists`)
         if (!existsConfig) return;
         this.configTable.remove(existsConfig);
@@ -43,10 +43,10 @@ export class chucki extends Contract {
     @action("upconfig")
     upconfig(key: Name, value: f32): void {
 
-        const existsConfig = this.configTable.requireGet(key.N,`${key.toString()} not exists`);
+        const existsConfig = this.configTable.requireGet(key.N, `${key.toString()} not exists`);
         if (!existsConfig) return;
         existsConfig.value = value
-        this.configTable.update(existsConfig,this.receiver);
+        this.configTable.update(existsConfig, this.receiver);
 
     }
 
@@ -103,14 +103,19 @@ export class chucki extends Contract {
         // Fail silently if from is not atomic market contract
         if (memo.indexOf(AM_PAYOUT_MEMO) < 0 && memo.indexOf(AM_FEES_MEMO) < 0) return;
 
-        const totalPayout = this.configTable.requireGet(Name.fromString(SALES_VOLUME_KEY).N, `Missing ${SALES_VOLUME_KEY} key in config`)
-        const shareBase = this.configTable.requireGet(Name.fromString(LOAN_BASE_SHARE_KEY).N, `Missing ${LOAN_BASE_SHARE_KEY} key in config`)
-        const volumeStep = this.configTable.requireGet(Name.fromString(LOAN_VOLUME_STEP_KEY).N, `Missing ${LOAN_VOLUME_STEP_KEY} key in config`)
-        const shareAdd = this.configTable.requireGet(Name.fromString(LOAN_ADD_SHARE_KEY).N, `Missing ${LOAN_ADD_SHARE_KEY} key in config`)
-        const shareLimit = this.configTable.requireGet(Name.fromString(LOAN_VOLUME_STEP_KEY).N, `Missing ${LOAN_VOLUME_STEP_KEY} key in config`)
+
 
         if (from == this.receiver) return;
         if (from == Name.fromString(AM_TRANSFER_MARKET_ACCOUNT)) {
+
+            const totalPayout = this.configTable.requireGet(Name.fromString(SALES_VOLUME_KEY).N, `Missing ${SALES_VOLUME_KEY} key in config`)
+            const shareBase = this.configTable.requireGet(Name.fromString(LOAN_BASE_SHARE_KEY).N, `Missing ${LOAN_BASE_SHARE_KEY} key in config`)
+            const volumeStep = this.configTable.requireGet(Name.fromString(LOAN_VOLUME_STEP_KEY).N, `Missing ${LOAN_VOLUME_STEP_KEY} key in config`)
+            const shareAdd = this.configTable.requireGet(Name.fromString(LOAN_ADD_SHARE_KEY).N, `Missing ${LOAN_ADD_SHARE_KEY} key in config`)
+            const shareLimit = this.configTable.requireGet(Name.fromString(LOAN_VOLUME_STEP_KEY).N, `Missing ${LOAN_VOLUME_STEP_KEY} key in config`)
+
+            totalPayout.value = (totalPayout.value as i64 + quantity.amount) as f32;
+            this.configTable.update(totalPayout, this.receiver);
 
             const computedShare = shareBase.value + (shareAdd.value * (Math.floor(totalPayout.value / volumeStep.value)));
             const limtedShare = computedShare >= shareLimit.value ? shareLimit.value : computedShare
@@ -127,8 +132,7 @@ export class chucki extends Contract {
                 )],
                 `XPRUSDC>XPRLOAN,1`)
 
-            totalPayout.value = (totalPayout.value as i64 + quantity.amount) as f32;
-            this.configTable.update(totalPayout, this.receiver);
+            
 
         };
 
